@@ -1,0 +1,21 @@
+{{#basic-dropdown
+  registerAPI=(action (mut dropdownAPI))
+  calculatePosition=(action 'calculatePosition' (hash positionPreference=_positionPreference))
+  as |dropdown|}}
+  {{yield
+    (hash
+      target=(component 'basic-tooltip/target-component'
+        tagName=''
+        dropdown=dropdown
+        updateTargetHovering=(action 'updateTargetHovering')
+      )
+      content=(component 'basic-tooltip/content-component'
+        dropdown=dropdown
+        arrowPosition=currentPosition
+        arrowClasses=arrowClasses
+        contentClasses=contentClasses
+        updateContentHovering=(action 'updateContentHovering')
+      )
+    )
+  }}
+{{/basic-dropdown}}

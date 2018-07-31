@@ -1,0 +1,9 @@
+{{#dropdown.trigger
+  mouseEnter=(action 'mouseEnter' dropdown)
+  mouseLeave=(action 'mouseLeave' dropdown)
+  aria-expanded=false
+  tabindex=(hash)
+  eventType='none'
+}}
+  {{yield}}
+{{/dropdown.trigger}}

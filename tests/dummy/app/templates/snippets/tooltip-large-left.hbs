@@ -1,0 +1,12 @@
+{{#basic-tooltip as |tooltip|}}
+  {{#tooltip.target}}
+    Here is a block of text meant to show a tooltip on hover.
+  {{/tooltip.target}}
+  {{#tooltip.content
+    arrowClasses='popover-arrow--large'
+    contentClasses='content-padding--large'
+    dropdownClasses='dropdown-border--large'
+  }}
+    This is the content of the tooltip.
+  {{/tooltip.content}}
+{{/basic-tooltip}}

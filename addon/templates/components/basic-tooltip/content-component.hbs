@@ -1,0 +1,13 @@
+{{#dropdown.content
+  class=dropdownClasses
+  onMouseEnter=(action 'mouseEnter')
+  onMouseLeave=(action 'mouseLeave')
+}}
+  {{basic-tooltip/content-component/arrow
+    arrowPosition=arrowPosition
+    arrowClasses=arrowClasses
+  }}
+<div class="tooltip-content {{contentClasses}}">
+    {{yield}}
+  </div>
+{{/dropdown.content}}
